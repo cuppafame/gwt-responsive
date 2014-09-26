@@ -1,0 +1,308 @@
+/*
+Font definitions
+*/
+@def FONT_FAMILY            Arial Unicode MS, Arial, Helvetica, Tahoma, sans-serif;
+@def MAIN_FONT_SIZE         14px;
+@def SUBHEADER_FONT_SIZE    1.50em; 
+@def SUBSUBHEADER_FONT_SIZE 1.15em;
+
+/*
+* sizes
+*/
+@def BORDER_RADIUS       0.5em;
+@def CONTROLS_RADIUS     3px;
+
+/*
+* Colors definitions
+*/
+@def NORTH_COLOR       #FFA500;
+@def HEADER_COLOR      #87CEEB;
+@def SHADOW_COLOR      #708090;
+@def COLOR_DARK_GRAY   #666;
+@def COLOR_GRAY        #ccc;
+@def COLOR_LIGHT_GRAY  #eee;
+@def COLOR_WHITE       #fff;
+@def COLOR_BLACK       #000;
+
+@def BUTTON_COLOR      #3A507F;
+@def CANCEL_COLOR      #D9E8F5;
+@def DISABLED_COLOR    #888;
+@def BUTTON_COLOR_WHITE #D9E8F5;
+@def GLOW_COLOR        rgba(81, 203, 238, 1);
+@def READONLY_COLOR    #eee;
+
+body {
+	background-color: COLOR_GRAY;
+	overflow-x:       hidden;
+	overflow-y:       auto;
+	font-family:      FONT_FAMILY;
+	font-size:        MAIN_FONT_SIZE;
+	color:            COLOR_BLACK;
+	margin:           0px;
+	border:           0px;
+	padding:          0px;
+	direction:        ltr;
+}
+
+.gwt-Button {
+	margin:        3px;
+	border:        1px solid BUTTON_COLOR;
+	border-radius: CONTROLS_RADIUS;
+	height:        2.5em;
+	font-size:     MAIN_FONT_SIZE;
+	background:    BUTTON_COLOR;
+	color:         BUTTON_COLOR_WHITE;
+	cursor:        pointer;
+	cursor:        hand;
+	padding-left:  0.5em;
+	padding-right: 0.5em;
+	
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+   box-sizing:        border-box;
+}
+
+.gwt-CancelButton {
+	color:      COLOR_BLACK;
+	background: CANCEL_COLOR;
+}
+
+
+.gwt-Button:active {
+}
+
+.gwt-Button:hover {
+  -moz-box-shadow:    0 0 5px GLOW_COLOR;
+  -webkit-box-shadow: 0 0 5px GLOW_COLOR;
+  box-shadow:         0 0 5px GLOW_COLOR;
+}
+
+.gwt-Button[disabled] {
+  cursor:  default;
+  color:   DISABLED_COLOR;
+  opacity: 0.5;
+}
+
+.gwt-Button[disabled]  img {
+	opacity: 0.3;
+}
+
+.gwt-Button[disabled]:hover {
+}
+
+.mainScrollPanel {
+  margin-left:    auto;
+  margin-right:   auto;
+  /* display:        table;
+  table-layout:   fixed;
+  padding:        0px; */
+  width:     100%;
+  overflow:  hidden;
+  max-width: 1280px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+  box-sizing:         border-box;
+}
+
+@external .rvImage; 
+.rvImage {
+}
+
+.rvTable {
+	width:           100%;
+	table-layout:    fixed;
+	border-collapse: collapse;
+	text-align:      left;
+}
+
+.cardTitleText {
+	vertical-align: middle;
+}
+
+.cardTitle {
+	width:            100%;
+	padding:          0px;
+	margin:           0px;
+	min-height:       2em;
+	background-color: HEADER_COLOR;
+	text-align:       center;
+	font-size:        SUBHEADER_FONT_SIZE;
+}
+
+@external .mobi-rvPan;
+.mobi-rvPan {
+	display: table;
+	width: 100%;
+	margin-top: 1em;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+@external .mobi-rv-leftPan;
+.mobi-rv-leftPan {
+	display: table-cell;
+	width: 100%;
+	vertical-align: top;
+	padding-right: 1em;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+@external .mobi-rv-rightPan;
+.mobi-rv-rightPan {
+	display: table-cell;
+	padding-right: 0.5em;
+}
+
+@external .mainMenuToggler ;
+.mainMenuToggler {
+	display: none;
+	vertical-align: bottom;
+}
+
+@external .mainMenu ;
+.mainMenu {
+	position: fixed;
+}
+
+@external .mainRootPanel;
+.mainRootPanel {
+  position: absolute;
+  left:   0px;
+  top:    3em;
+  right:  0px;
+  bottom: 20px;
+}
+
+@external .mainNorthPanel;
+.mainNorthPanel {
+  position:         fixed;
+  top:              0px;
+  left:             0px;
+  right:            0px;
+  height:           2.5em;
+  background-color: COLOR_WHITE;
+  border-bottom:    1px solid BORDER_COLOR;
+  padding:          0.2em;
+  background-color: NORTH_COLOR;
+  
+   -moz-box-shadow:    3px 3px 5px SHADOW_COLOR;
+   -webkit-box-shadow: 3px 3px 5px SHADOW_COLOR;
+   box-shadow:        3px 3px 5px SHADOW_COLOR;
+}
+
+
+@external .mainStackPanel ;
+.mainStackPanel {
+	margin: 1em;
+	background-color: COLOR_WHITE;
+	border: 1px solid BORDER_COLOR;
+	border-radius: BORDER_RADIUS;
+	overflow: hidden;
+    min-width: 20em;
+	max-width: 20em;
+	
+   -moz-box-shadow:    3px 3px 5px SHADOW_COLOR;
+   -webkit-box-shadow: 3px 3px 5px SHADOW_COLOR;
+   box-shadow:        3px 3px 5px SHADOW_COLOR;
+}
+
+.mainStackPanelHeader {
+  cursor:         pointer;
+  cursor:         hand;
+  font-size:      SUBSUBHEADER_FONT_SIZE;
+  padding:        3px;
+  padding-left:   1em;
+  border-bottom:  1px solid BORDER_COLOR;
+  background:     HEADER_COLOR;
+  text-transform: uppercase;
+  white-space:    nowrap;
+  vertical-align: middle;
+  color:          COLOR_WHITE;
+}
+
+
+.mainPlacePanelCover {
+	position: fixed;
+	width: 100%;
+	max-width: 85em;
+	/*min-width:     50em;*/ /*disabling for responsive design*/
+	bottom: 0px;
+	top: 3em;
+	background: COLOR_WHITE;
+	z-index: 10;
+	margin: 1em;
+	border-radius: 1em;
+	overflow: hidden;
+}
+
+@external .mainPlacePanel ;
+.mainPlacePanel {
+	margin: 1em 1em 1em 0em;
+	background-color: COLOR_WHITE;
+	border: 1px solid BORDER_COLOR;
+	border-radius: BORDER_RADIUS;
+	max-width: 85em;
+	min-height: 10em;
+	overflow: hidden;
+	padding:  0.5em;
+	
+   -moz-box-shadow:    3px 3px 5px SHADOW_COLOR;
+   -webkit-box-shadow: 3px 3px 5px SHADOW_COLOR;
+   box-shadow:        3px 3px 5px SHADOW_COLOR;
+}
+
+@external .mainMenuContainer ;
+.mainMenuContainer {
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	display: table-cell;
+	float: none;
+	vertical-align: top;
+	min-width: 22em;
+	width: 22em;
+}
+
+.mainMenuContainer .gwt-DisclosurePanel .content {
+	padding: 0px;
+	margin: 0px;
+}
+
+@external .mainPlaceContainer ;
+.mainPlaceContainer {
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	display: table-cell;
+	vertical-align: top;
+	float: none;
+	width: 100%;
+}
+
+.login {
+	font-weight:   bold;
+	padding-right: 1em; 
+}
+
+@external .formPanel;
+.formPanel {
+	padding: 0.5em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.formFooter {
+	margin-top: 1em;
+	display: block;
+	text-align: right;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}

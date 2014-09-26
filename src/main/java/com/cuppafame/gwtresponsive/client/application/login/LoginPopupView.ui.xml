@@ -1,0 +1,23 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:cf='urn:import:com.cuppafame.gwtresponsive.client.common'>
+
+	<ui:with field="res"
+		type="com.cuppafame.gwtresponsive.client.resources.MainResources" />
+	<ui:with field="msg"
+		type="com.cuppafame.gwtresponsive.client.resources.MainMessages" />
+
+	<cf:ResponsiveDialog ui:field="dialog"
+		animationEnabled="true" modal="true" text="{msg.login}" glassEnabled="true"
+		addStyleNames="mobi-dialogBox">
+		<g:FlowPanel addStyleNames="{res.css.formPanel}">
+			<g:FlowPanel>
+				<cf:ResponsiveTextBox placeholder="login"/>
+			</g:FlowPanel>
+			<g:FlowPanel addStyleNames="{res.css.formFooter}">
+				<g:Button ui:field="loginButton" text="{msg.loginButton}" />
+				<g:Button ui:field="cancelButton" text="{msg.cancelButton}"
+					addStyleNames="gwt-CancelButton" />
+			</g:FlowPanel>
+		</g:FlowPanel>
+	</cf:ResponsiveDialog>
+</ui:UiBinder>

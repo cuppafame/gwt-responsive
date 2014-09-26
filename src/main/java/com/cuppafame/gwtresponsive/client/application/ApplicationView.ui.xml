@@ -1,0 +1,32 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<ui:with field="res" type="com.cuppafame.gwtresponsive.client.resources.MainResources" />
+	<ui:with field="msg" type="com.cuppafame.gwtresponsive.client.resources.MainMessages" />
+
+	<g:HTMLPanel ui:field="rootPanel" addStyleNames="{res.css.mainRootPanel}">
+		<g:FlowPanel ui:field="scrollPanel" addStyleNames="{res.css.mainScrollPanel}">
+			<g:FlowPanel ui:field="mainMenuContainer" addStyleNames="{res.css.mainMenuContainer}">
+				<g:FlowPanel ui:field="mainMenuPanel" addStyleNames="{res.css.mainMenu}" />
+			</g:FlowPanel>
+			<g:FlowPanel ui:field="centerContainer" addStyleNames="{res.css.mainPlaceContainer}">
+				<g:SimplePanel ui:field="centerPanel" />
+			</g:FlowPanel>
+			<!-- contrary to intuition, north slot should be after center because 
+				the center will go under the north (fixed) while scrolled -->
+			<g:SimplePanel ui:field="northSlot" addStyleNames="{res.css.mainNorthPanel}">
+				<g:HorizontalPanel>
+	    			<g:cell horizontalAlignment="ALIGN_LEFT" width="24px">
+					    <g:ToggleButton ui:field="toggleMenu" addStyleNames="{res.css.mainMenuToggler}">
+					      <g:upFace image="{res.mainMenu24px}"/>
+					      <g:downFace image="{res.mainMenu24px}"/>
+					    </g:ToggleButton>
+				    </g:cell>
+	    			<g:cell verticalAlignment="ALIGN_MIDDLE" horizontalAlignment="ALIGN_RIGHT" width="100%">
+					    <g:Anchor ui:field="login" text="{msg.login}" addStyleNames="{res.css.login}" href="javascript:"/>
+				    </g:cell>
+				</g:HorizontalPanel>
+			</g:SimplePanel>
+		</g:FlowPanel>
+	</g:HTMLPanel>
+</ui:UiBinder>

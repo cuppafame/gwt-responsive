@@ -1,0 +1,12 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+             
+	<ui:with field="res"
+		type="com.cuppafame.gwtresponsive.client.resources.MainResources" />
+	<ui:with field="msg"
+		type="com.cuppafame.gwtresponsive.client.resources.MainMessages" />
+
+    <g:HTMLPanel addStyleNames="{res.css.mainPlacePanel}">
+    	<h2 style="text-align:center;"><ui:text from="{msg.helloResponsive}"/></h2>
+    </g:HTMLPanel>
+</ui:UiBinder>

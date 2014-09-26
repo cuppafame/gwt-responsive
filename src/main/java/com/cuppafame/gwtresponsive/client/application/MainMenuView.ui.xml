@@ -1,0 +1,29 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<ui:with field="res"
+		type="com.cuppafame.gwtresponsive.client.resources.MainResources" />
+	<ui:with field="msg"
+		type="com.cuppafame.gwtresponsive.client.resources.MainMessages" />
+
+	<g:FlowPanel ui:field="stackPanel" addStyleNames="{res.css.mainStackPanel}">
+		<g:DisclosurePanel width="100%" animationEnabled="true" open="true">
+			<g:customHeader>
+				<g:HTML text="{msg.mainMenuCategory1}" width="100%" addStyleNames="{res.css.mainStackPanelHeader}"/>
+			</g:customHeader>
+			<g:FlowPanel>
+				<g:Hyperlink text="{msg.mainMenuItemHome}" targetHistoryToken="!home"/>
+				<g:Hyperlink text="{msg.mainMenuItemAbout}" targetHistoryToken="!about"/>
+				<g:Hyperlink text="{msg.mainMenuItemRV}" targetHistoryToken="!rv"/>
+			</g:FlowPanel>
+		</g:DisclosurePanel>
+		<g:DisclosurePanel width="100%" animationEnabled="true" open="false">
+			<g:customHeader>
+				<g:HTML text="{msg.mainMenuCategory2}" width="100%" addStyleNames="{res.css.mainStackPanelHeader}"/>
+			</g:customHeader>
+			<g:FlowPanel>
+				<g:Hyperlink text="{msg.mainMenuItemTOU}" targetHistoryToken="!legal"/>
+			</g:FlowPanel>
+		</g:DisclosurePanel>
+	</g:FlowPanel>
+</ui:UiBinder>
