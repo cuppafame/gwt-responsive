@@ -11,7 +11,8 @@
 		addStyleNames="mobi-dialogBox">
 		<g:FlowPanel addStyleNames="{res.css.formPanel}">
 			<g:FlowPanel>
-				<cf:ResponsiveTextBox placeholder="login"/>
+				<g:TextBox ui:field="user" addStyleNames="{res.css.formField}"/>
+				<g:PasswordTextBox ui:field="password" addStyleNames="{res.css.formField}"/>
 			</g:FlowPanel>
 			<g:FlowPanel addStyleNames="{res.css.formFooter}">
 				<g:Button ui:field="loginButton" text="{msg.loginButton}" />

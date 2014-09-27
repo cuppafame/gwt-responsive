@@ -8,6 +8,9 @@ public interface MainMessages extends Messages {
 	String   login();
 	SafeHtml about();
 	SafeHtml internet();
+
+	String userPlaceholder();
+	String passwordPlaceholder();
 	String loginButton();
 	String cancelButton();
 	

@@ -17,6 +17,7 @@ public interface MainStyles extends CssResource {
 	String login();
 	String formPanel();
 	String formFooter();
+	String formField();
 	String cardTitle();
 	String cardTitleText();
 	String rvTable();
