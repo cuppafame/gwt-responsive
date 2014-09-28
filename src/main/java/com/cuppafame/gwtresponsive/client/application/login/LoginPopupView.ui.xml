@@ -7,8 +7,7 @@
 		type="com.cuppafame.gwtresponsive.client.resources.MainMessages" />
 
 	<cf:ResponsiveDialog ui:field="dialog"
-		animationEnabled="true" modal="true" text="{msg.login}" glassEnabled="true"
-		addStyleNames="mobi-dialogBox">
+		animationEnabled="true" modal="true" text="{msg.login}" glassEnabled="true">
 		<g:FlowPanel addStyleNames="{res.css.formPanel}">
 			<g:FlowPanel>
 				<g:TextBox ui:field="user" addStyleNames="{res.css.formField}"/>
