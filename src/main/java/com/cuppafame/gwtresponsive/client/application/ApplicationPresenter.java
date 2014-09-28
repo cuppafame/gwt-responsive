@@ -24,7 +24,6 @@ import com.gwtplatform.mvp.client.proxy.RevealContentHandler;
 public class ApplicationPresenter extends Presenter<ApplicationPresenter.MyView, ApplicationPresenter.MyProxy> {
     public interface MyView extends View {
     	HasValue<Boolean> getMenuToggled();
-		void toggleMenu(boolean forced);
 		HasClickHandlers getLoginClick();
     }
 
@@ -54,33 +53,6 @@ public class ApplicationPresenter extends Presenter<ApplicationPresenter.MyView,
 	@Override
 	protected void onBind() {
 		super.onBind();
-		//default is not to force menu (auto mode)
-		getView().toggleMenu(false); 
-		
-		Window.addResizeHandler(new ResizeHandler() {
-			
-			@Override
-			public void onResize(ResizeEvent event) {
-				//on scroll unforce the menu (auto mode)
-				getView().toggleMenu(false); 
-				getView().getMenuToggled().setValue(false, false);
-			}
-		});
-		
-		getView().getMenuToggled().addValueChangeHandler(new ValueChangeHandler<Boolean>() {
-			
-			@Override
-			public void onValueChange(ValueChangeEvent<Boolean> event) {
-				//only possible in mobile view
-				//force/unforce the menu on user two-state button click
-				boolean forced = event.getValue();
-				getView().toggleMenu(forced); 
-				//scroll to top if the user forces the menu to appear in mobile view
-				Window.scrollTo(0, 0);
-				
-			}
-		});
-		
 		getView().getLoginClick().addClickHandler(new ClickHandler() {
 			
 			@Override
@@ -95,9 +67,7 @@ public class ApplicationPresenter extends Presenter<ApplicationPresenter.MyView,
 	@Override
 	protected void onReset() {
 		super.onReset();
-		//unforce the menu
-		getView().toggleMenu(false); 
-		getView().getMenuToggled().setValue(false, false);
+		getView().getMenuToggled().setValue(false, true);
 	}
     
 	

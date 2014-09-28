@@ -1,4 +1,4 @@
-@media all and (max-width: 640px) {
+@media all and (max-width: 800px) {
 	body {
 		margin: 0px;
 		padding: 0px;
@@ -24,9 +24,6 @@
 		max-width:  480px;
 		max-height: 480px;
 	}
-}
-
-@media all and (max-width: 800px) {
 	.mainMenuToggler {
 		display: inline-block;
 	}
@@ -39,10 +36,10 @@
 		float: left;
 		position: relative;
 	}
-	.mainRootPanel[menu="auto"] .mainMenuContainer {
+	.mainRootPanel[menu="off"] .mainMenuContainer {
 		margin-left: -100%;
 	}
-	.mainRootPanel[menu="force"] .mainMenuContainer {
+	.mainRootPanel[menu="on"] .mainMenuContainer {
 		margin-left: 0px;
 	}
 	.mainStackPanel {
@@ -54,12 +51,12 @@
 		float: left;
 		position: relative;
 	}
-	.mainRootPanel[menu="auto"] .mainPlaceContainer {
+	.mainRootPanel[menu="off"] .mainPlaceContainer {
 		margin-left: 0px;
 		margin-right: 0px;
 		width: 100%;
 	}
-	.mainRootPanel[menu="force"] .mainPlaceContainer {
+	.mainRootPanel[menu="on"] .mainPlaceContainer {
 		margin-left: 0px;
 		margin-right: -100%;
 		width: 100%;

@@ -3,8 +3,13 @@ package com.cuppafame.gwtresponsive.client.application;
 import javax.inject.Inject;
 
 import com.google.gwt.event.dom.client.HasClickHandlers;
+import com.google.gwt.event.logical.shared.ResizeEvent;
+import com.google.gwt.event.logical.shared.ResizeHandler;
+import com.google.gwt.event.logical.shared.ValueChangeEvent;
+import com.google.gwt.event.logical.shared.ValueChangeHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.HasValue;
 import com.google.gwt.user.client.ui.IsWidget;
@@ -32,18 +37,36 @@ public class ApplicationView extends ViewImpl implements
 	ApplicationView(Binder uiBinder) {
 		
 		initWidget(uiBinder.createAndBindUi(this));
-	}
 
-	public void toggleMenu(boolean forced) {
-		rootPanel.getElement().setAttribute("menu", forced ? "force" : "auto");
+		rootPanel.getElement().setAttribute("menu", "off");
+		Window.addResizeHandler(new ResizeHandler() {
+			
+			@Override
+			public void onResize(ResizeEvent event) {
+				//on resize hide the menu
+				toggleMenu.setValue(false, true);
+			}
+		});
+		
+		toggleMenu.addValueChangeHandler(new ValueChangeHandler<Boolean>() {
+			
+			@Override
+			public void onValueChange(ValueChangeEvent<Boolean> event) {
+				//only available in mobile view
+				//toggle the menu as a reaction to two-state button click
+				rootPanel.getElement().setAttribute("menu", event.getValue() ? "on" : "off");
+				//scroll to top if the user forces the menu to appear in mobile view
+				Window.scrollTo(0, 0);
+				
+			}
+		});
+		
 	}
 
 	@Override
 	public HasValue<Boolean> getMenuToggled() {
 		return toggleMenu;
 	}
-
-	
 	
 	@Override
 	public HasClickHandlers getLoginClick() {
