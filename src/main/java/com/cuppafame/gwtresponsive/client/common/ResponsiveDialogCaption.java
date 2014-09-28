@@ -24,6 +24,10 @@ import com.google.gwt.user.client.ui.HasHTML;
 import com.google.gwt.user.client.ui.HasVisibility;
 import com.google.gwt.user.client.ui.InlineHTML;
 
+/**
+ * Custom dialog caption with ok and cancel buttons built in
+ *
+ */
 public class ResponsiveDialogCaption extends Composite implements
 		DialogBox.Caption, HasHTML {
 	private FocusPanel panel = new FocusPanel();

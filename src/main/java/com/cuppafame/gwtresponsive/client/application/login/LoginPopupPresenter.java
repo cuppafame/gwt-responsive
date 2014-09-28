@@ -5,7 +5,7 @@ import javax.inject.Inject;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.HasClickHandlers;
-import com.google.gwt.user.client.ui.HasEnabled;
+import com.google.gwt.user.client.ui.HasText;
 import com.google.web.bindery.event.shared.EventBus;
 import com.gwtplatform.mvp.client.PopupView;
 import com.gwtplatform.mvp.client.PresenterWidget;
@@ -14,7 +14,7 @@ public class LoginPopupPresenter extends PresenterWidget<LoginPopupPresenter.MyV
     public interface MyView extends PopupView {
     	HasClickHandlers getLoginClick();
     	HasClickHandlers getCancelClick();
-    	HasEnabled getLoginEnabled();
+    	HasText getUser();
     }
 
     @Inject
@@ -31,7 +31,8 @@ public class LoginPopupPresenter extends PresenterWidget<LoginPopupPresenter.MyV
 			@Override
 			public void onClick(ClickEvent event) {
 				getView().hide();
-				
+				//TODO: real login logic is out of scope of this demo
+				getEventBus().fireEvent(new LoginEvent(getView().getUser().getText()));
 			}
 		});
 		getView().getCancelClick().addClickHandler(new ClickHandler() {

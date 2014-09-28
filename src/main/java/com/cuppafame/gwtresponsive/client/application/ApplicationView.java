@@ -11,8 +11,10 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Anchor;
+import com.google.gwt.user.client.ui.HasText;
 import com.google.gwt.user.client.ui.HasValue;
 import com.google.gwt.user.client.ui.IsWidget;
+import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.Panel;
 import com.google.gwt.user.client.ui.ToggleButton;
 import com.google.gwt.user.client.ui.Widget;
@@ -32,6 +34,9 @@ public class ApplicationView extends ViewImpl implements
 
 	@UiField
 	Anchor login;
+	
+	@UiField
+	Label welcome;
 	
 	@Inject
 	ApplicationView(Binder uiBinder) {
@@ -71,6 +76,16 @@ public class ApplicationView extends ViewImpl implements
 	@Override
 	public HasClickHandlers getLoginClick() {
 		return login;
+	}
+
+	@Override
+	public HasText getLoginText() {
+		return login;
+	}
+
+	@Override
+	public HasText getWelcomeMessage() {
+		return welcome;
 	}
 
 	@Override

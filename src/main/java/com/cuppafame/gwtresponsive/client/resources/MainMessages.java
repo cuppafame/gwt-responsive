@@ -6,6 +6,8 @@ import com.google.gwt.safehtml.shared.SafeHtml;
 public interface MainMessages extends Messages {
 	String   helloResponsive();
 	String   login();
+	String   logout();
+	String   welcome(String user);
 	SafeHtml about();
 	SafeHtml internet();
 
@@ -14,7 +16,7 @@ public interface MainMessages extends Messages {
 	String loginButton();
 	String cancelButton();
 	
-	String mainMenuItemRV();
+	String mainMenuItemComplex();
 	String mainMenuCategory1();
 	String mainMenuItemHome();
 	String mainMenuItemAbout();

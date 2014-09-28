@@ -23,7 +23,10 @@
 					    </g:ToggleButton>
 				    </g:cell>
 	    			<g:cell verticalAlignment="ALIGN_MIDDLE" horizontalAlignment="ALIGN_RIGHT" width="100%">
-					    <g:Anchor ui:field="login" text="{msg.login}" addStyleNames="{res.css.login}" href="javascript:"/>
+	    				<g:FlowPanel>
+						    <g:Label ui:field="welcome" addStyleNames="{res.css.login}"/>
+						    <g:Anchor ui:field="login" text="{msg.login}" addStyleNames="{res.css.login}" href="javascript:"/>
+	    				</g:FlowPanel>
 				    </g:cell>
 				</g:HorizontalPanel>
 			</g:SimplePanel>

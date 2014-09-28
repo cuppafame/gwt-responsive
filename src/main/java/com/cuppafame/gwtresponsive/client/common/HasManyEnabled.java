@@ -2,6 +2,10 @@ package com.cuppafame.gwtresponsive.client.common;
 
 import com.google.gwt.user.client.ui.HasEnabled;
 
+/**
+ * HasMany adapter that supports multiple widgets at a time.
+ *
+ */
 public class HasManyEnabled  implements HasEnabled {
 
 	final private HasEnabled[] widgets;

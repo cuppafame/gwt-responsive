@@ -1,18 +1,21 @@
 package com.cuppafame.gwtresponsive.client.common;
 
 import com.google.gwt.user.client.ui.HasVisibility;
-import com.google.gwt.user.client.ui.Widget;
 
-public class HasManyVisibility  implements HasVisibility{
+/**
+ * HasVisibility adapter that supports multiple widgets at a time.
+ *
+ */
+public class HasManyVisibility implements HasVisibility {
 
 	final private HasVisibility[] widgets;
-	
+
 	public HasManyVisibility(HasVisibility... widget) {
 		this.widgets = widget;
 	}
-	
+
 	@Override
-  public boolean isVisible() {
+	public boolean isVisible() {
 		for (HasVisibility w : widgets) {
 			if (w.isVisible()) {
 				return true;
@@ -22,10 +25,10 @@ public class HasManyVisibility  implements HasVisibility{
 	}
 
 	@Override
-  public void setVisible(boolean visible) {
+	public void setVisible(boolean visible) {
 		for (HasVisibility w : widgets) {
 			w.setVisible(visible);
 		}
-  }
+	}
 
 }

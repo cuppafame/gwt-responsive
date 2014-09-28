@@ -5,6 +5,10 @@ import com.google.gwt.event.dom.client.HasClickHandlers;
 import com.google.gwt.event.shared.GwtEvent;
 import com.google.gwt.event.shared.HandlerRegistration;
 
+/**
+ * HasManyClickHandlers adapter that supports multiple widgets at a time.
+ *
+ */
 public class HasManyClickHandlers implements HasClickHandlers {
 
 	private final HasClickHandlers[] clicks;

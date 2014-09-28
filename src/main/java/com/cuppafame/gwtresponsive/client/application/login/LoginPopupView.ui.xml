@@ -15,7 +15,7 @@
 				<g:PasswordTextBox ui:field="password" addStyleNames="{res.css.formField}"/>
 			</g:FlowPanel>
 			<g:FlowPanel addStyleNames="{res.css.formFooter}">
-				<g:Button ui:field="loginButton" text="{msg.loginButton}" />
+				<g:Button ui:field="loginButton" text="{msg.loginButton}" enabled="false"/>
 				<g:Button ui:field="cancelButton" text="{msg.cancelButton}"
 					addStyleNames="gwt-CancelButton" />
 			</g:FlowPanel>
