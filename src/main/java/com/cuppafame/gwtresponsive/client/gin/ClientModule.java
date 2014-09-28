@@ -2,9 +2,9 @@ package com.cuppafame.gwtresponsive.client.gin;
 
 import com.cuppafame.gwtresponsive.client.application.ApplicationModule;
 import com.cuppafame.gwtresponsive.client.application.about.AboutModule;
+import com.cuppafame.gwtresponsive.client.application.complex.ComplexModule;
 import com.cuppafame.gwtresponsive.client.application.legal.LegalModule;
 import com.cuppafame.gwtresponsive.client.application.login.LoginModule;
-import com.cuppafame.gwtresponsive.client.application.rv.RVModule;
 import com.cuppafame.gwtresponsive.client.place.NameTokens;
 import com.cuppafame.gwtresponsive.client.resources.MainMessages;
 import com.cuppafame.gwtresponsive.client.resources.MainResources;
@@ -26,7 +26,7 @@ public class ClientModule extends AbstractPresenterModule {
         install(new ApplicationModule());
         install(new AboutModule());
         install(new LegalModule());
-        install(new RVModule());
+        install(new ComplexModule());
         install(new LoginModule());
 
         // DefaultPlaceManager Places

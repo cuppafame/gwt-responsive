@@ -1,11 +1,11 @@
-package com.cuppafame.gwtresponsive.client.application.rv;
+package com.cuppafame.gwtresponsive.client.application.complex;
 
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 
-public class RVModule extends AbstractPresenterModule {
+public class ComplexModule extends AbstractPresenterModule {
     @Override
     protected void configure() {
-        bindPresenter(RVPagePresenter.class, RVPagePresenter.MyView.class, RVPageView.class,
-                RVPagePresenter.MyProxy.class);
+        bindPresenter(ComplexPresenter.class, ComplexPresenter.MyView.class, ComplexPageView.class,
+                ComplexPresenter.MyProxy.class);
     }
 }

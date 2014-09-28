@@ -1,4 +1,4 @@
-package com.cuppafame.gwtresponsive.client.application.rv;
+package com.cuppafame.gwtresponsive.client.application.complex;
 
 import javax.inject.Inject;
 
@@ -12,19 +12,19 @@ import com.gwtplatform.mvp.client.annotations.NameToken;
 import com.gwtplatform.mvp.client.annotations.ProxyStandard;
 import com.gwtplatform.mvp.client.proxy.ProxyPlace;
 
-public class RVPagePresenter extends Presenter<RVPagePresenter.MyView, RVPagePresenter.MyProxy> {
+public class ComplexPresenter extends Presenter<ComplexPresenter.MyView, ComplexPresenter.MyProxy> {
     public interface MyView extends View {
     }
 
     private final MainResources res;
     
     @ProxyStandard
-    @NameToken(NameTokens.rv)
-    public interface MyProxy extends ProxyPlace<RVPagePresenter> {
+    @NameToken(NameTokens.complex)
+    public interface MyProxy extends ProxyPlace<ComplexPresenter> {
     }
 
     @Inject
-    RVPagePresenter(EventBus eventBus, MyView view, MyProxy proxy, MainResources res) {
+    ComplexPresenter(EventBus eventBus, MyView view, MyProxy proxy, MainResources res) {
         super(eventBus, view, proxy, ApplicationPresenter.SLOT_SetMainContent);
         
         this.res = res;

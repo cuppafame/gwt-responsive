@@ -14,7 +14,7 @@
 			<g:FlowPanel>
 				<g:Hyperlink text="{msg.mainMenuItemHome}" targetHistoryToken="!home"/>
 				<g:Hyperlink text="{msg.mainMenuItemAbout}" targetHistoryToken="!about"/>
-				<g:Hyperlink text="{msg.mainMenuItemRV}" targetHistoryToken="!rv"/>
+				<g:Hyperlink text="{msg.mainMenuItemRV}" targetHistoryToken="!complex"/>
 			</g:FlowPanel>
 		</g:DisclosurePanel>
 		<g:DisclosurePanel width="100%" animationEnabled="true" open="false">

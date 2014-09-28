@@ -30,6 +30,7 @@ Font definitions
 @def BUTTON_COLOR_WHITE #D9E8F5;
 @def GLOW_COLOR        rgba(81, 203, 238, 1);
 @def READONLY_COLOR    #eee;
+@def BORDER_COLOR      #8C8C8C;
 
 body {
 	background-color: COLOR_GRAY;
